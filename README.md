@@ -1,3 +1,3 @@
-# [Course material](https://docker-hy.github.io)
+# exercice 3.2 devops with docker
 
-Thank you for your help. If you have any questions send email jami.kousa@helsinki.fi or send message in course telegram group.
+Testing Circleci, Heroku, GitHub

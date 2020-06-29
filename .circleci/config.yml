@@ -4,6 +4,13 @@ orbs:
 workflows:
   deploy:
     jobs:
-      - docker/publish:
-          image: yves6000/docker-hy.github.io
-          tag: 'latest'
+    deploy:
+      docker:
+        - image: registry.heroku.com/docker-hy-pipeline/web
+      steps:
+        - checkout
+        - run:
+            name: Deploy Master to Heroku
+            command: git push https://git.heroku.com/docker-hy-pipeline.git
+
+

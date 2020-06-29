@@ -1,12 +1,13 @@
 version: "3"
 services:
-  coursematerial:
-    image: yves6000/docker-hy.github.io
+  dockerpipeline:
+    image: registry.heroku.com/docker-hy-pipeline/web
     ports:
       - 4000:80
-    container_name: coursematerial
+    container_name: dockerpipeline
   watchtower:
     image: containrrr/watchtower
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     container_name: watchtower
+
