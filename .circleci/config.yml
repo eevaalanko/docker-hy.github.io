@@ -6,4 +6,4 @@ workflows:
     jobs:
       - docker/publish:
           image: yves6000/docker-hy.github.io
-          tag: 'latest'
+          tag: 'latest'      
