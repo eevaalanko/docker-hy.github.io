@@ -2,13 +2,14 @@ version: 2.1
 orbs:
   docker: circleci/docker@1.0.0
 workflows:
-  deploy:
-    docker:
-      - image: registry.heroku.com/docker-hy-pipeline/web
-    steps:
-      - checkout
-      - run:
-          name: Deploy Master to Heroku
-          command: git push https://git.heroku.com/docker-hy-pipeline.git
+  jobs:
+    deploy:
+      docker:
+        - image: registry.heroku.com/docker-hy-pipeline/web
+      steps:
+        - checkout
+        - run:
+            name: Deploy Master to Heroku
+            command: git push https://git.heroku.com/docker-hy-pipeline.git
 
 
